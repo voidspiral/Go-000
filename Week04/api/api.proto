@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package api;
+
+message UserID {
+    int32 id = 1;
+}
+
+message User {
+    int32 id = 1;
+    string name = 2;
+}
+
+service School {
+    rpc GetUserByID(UserID) returns (User) {}
+}
